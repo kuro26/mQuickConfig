@@ -4,12 +4,12 @@ pip install shadowsocks
 cd ~
 rm -rf mss
 mkdir mss && cd mss
-touch showsock.json
+touch shadowsock.json
 
 # add configuration file here
 echo " 
 {
-	\"server\":\"$1\",
+	\"server\":\"0.0.0.0",
 	\"server_port\":9527,
 	\"local_address\":\"127.0.0.1\",
 	\"local_port\":1080,
@@ -20,6 +20,6 @@ echo "
 	\"workers\":1
 }" > shadowsock.json
 
-ssserver -c shadowsock.json -d start
+ssserver -c shadowsock.json --log-file shadowsock.log -d start
 
 
