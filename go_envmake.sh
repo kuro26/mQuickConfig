@@ -31,4 +31,4 @@ sudo apt install build-essential cmake python3-dev
 git submodule update --init --recursive
 python3 install.py --go-completer
 # seems VPN is required for compliling go completer
-
+# perhaps goproxy can help me with the question
