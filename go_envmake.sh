@@ -8,6 +8,7 @@ rm go1.13.linux-amd64.tar.gz
 echo "export GOROOT=\$HOME/go" >> .bashrc
 echo "export GOPATH=\$HOME/gopath" >> .bashrc
 echo "export PATH=\$PATH:\$GOROOT/bin:\$GOPATH/bin" >> .bashrc
+source ~/.bashrc
 
 # add pathogen manager for vim
 cd ~ && mkdir .vim
@@ -25,10 +26,20 @@ echo "filetype plugin indent on" >> .vimrc
 cd .vim
 mkdir bundle && cd bundle
 # 1. plugin YouCompleteMe
-git clone https://github.com/ycm-core/YouCompleteMe.git
-cd YouCompleteMe
-sudo apt install build-essential cmake python3-dev
-git submodule update --init --recursive
-python3 install.py --go-completer
-# seems VPN is required for compliling go completer
-# perhaps goproxy can help me with the question
+install_YCM=false
+if install_YCM==true; then
+    git clone https://github.com/ycm-core/YouCompleteMe.git
+    cd YouCompleteMe
+    sudo apt install build-essential cmake python3-dev
+    git submodule update --init --recursive
+    python3 install.py --go-completer
+    # seems VPN is required for compliling go completer
+    # perhaps goproxy can help me with the question
+fi
+
+# 2. plugin vim-go
+install_vim_go=true
+if install_vim_go==true;then
+    git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
+    # this need golang.org which is not accessible!sad!
+fi
