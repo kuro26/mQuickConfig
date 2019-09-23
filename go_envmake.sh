@@ -26,7 +26,8 @@ echo "filetype plugin indent on" >> .vimrc
 cd .vim
 mkdir bundle && cd bundle
 # 1. plugin YouCompleteMe
-if ((2*3 == 7)); then
+if ((2*3 == 6)); then
+    cd ~/.vim/bundle
     git clone https://github.com/ycm-core/YouCompleteMe.git
     cd YouCompleteMe
     sudo apt install build-essential cmake python3-dev
@@ -41,3 +42,5 @@ if ((2*3 == 6));then
     git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
     # this need golang.org which is not accessible!sad!
 fi
+
+
