@@ -19,6 +19,8 @@ mkdir bundle && cd bundle &&
 git clone git://github.com/JuliaEditorSupport/julia-vim.git
 
 # eidtor jupyter configuration
-
+# It's really unsafe to use jupyter in root mode
+# for Jupter can connect to host using root without password!
+# this is dangerous!
 
 
