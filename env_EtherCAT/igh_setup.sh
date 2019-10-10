@@ -12,6 +12,11 @@ tar xvf linux-3.16.74.tar
 make clean
 make mrproper
 make distclean
+make menuconfig       # config the kernel option!
+make bzImage
+make modules
+make modules_install
+make install
 
 # install ncurses which is used in menuconfig
 wget http://ftp.gnu.org/gnu/ncurses/ncurses-5.9.tar.gz

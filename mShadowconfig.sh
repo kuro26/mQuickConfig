@@ -1,3 +1,5 @@
+# attention1:there are some bug in openssl recent version
+# attention2:config the server port access in aliyun
 # install shadowsocks with python pip
 pip install shadowsocks
 # add configuration
@@ -9,7 +11,7 @@ touch shadowsock.json
 # add configuration file here
 echo " 
 {
-	\"server\":\"0.0.0.0",
+	\"server\":\"0.0.0.0\",
 	\"server_port\":9527,
 	\"local_address\":\"127.0.0.1\",
 	\"local_port\":1080,
