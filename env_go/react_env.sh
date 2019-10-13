@@ -1,3 +1,4 @@
+# install nodejs
 cd ~
 wget https://nodejs.org/dist/v10.16.3/node-v10.16.3-linux-x64.tar.xz
 xz node-v10.16.3-linux-x64.tar.xz
@@ -7,3 +8,4 @@ cp ~/.bashrc ~/.bashrc.bak
 echo "export PATH=\$PATH:\$HOME/nodejs-10.16.3/bin" >> .bashrc
 
 
+# using npm to start a react project!
